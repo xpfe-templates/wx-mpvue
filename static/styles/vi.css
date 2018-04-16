@@ -1,0 +1,14 @@
+/* VI品牌样式 */
+.u-color-primary {
+  color: #1CCADA !important;
+}
+.u-face-white {
+  background-image: linear-gradient(-90deg, #17E6D8 0%, #00C8FF 100%) !important;
+  box-shadow: 0 2px 13px 0 #1CCADA !important;
+}
+.u-face-bg {
+  box-shadow: 0 6px 17px 0 #009BAA !important;
+}
+.u-bg-linear1 {
+  background-image: linear-gradient(-90deg, #17E6D8 0%, #00C8FF 100%) !important;
+}

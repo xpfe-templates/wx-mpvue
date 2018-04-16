@@ -1,0 +1,58 @@
+@import './vi.css';
+
+/* 全局样式 */
+page {
+  font-size: 28px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  color: #333;
+  background-color: #eee;
+}
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 重置样式 */
+navigator {
+  display: inline-block;
+}
+.navigator-hover {
+  background-color: transparent;
+  opacity: 1;
+}
+button::after {
+  border: none;
+}
+.input-placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+/* 工具样式 */
+.u-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.u-clearfix:after {
+  content: ' ';
+  display: block;
+  visibility: hidden;
+  clear: both;
+  font-size: 0;
+  height: 0;
+}
+.u-left {
+  float: left;
+}
+.u-right {
+  float: right;
+}
+
+/* 组件样式 */
+.u-toptips-red {
+  background-color: #B81C22 !important;
+}
