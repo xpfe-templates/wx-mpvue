@@ -47,7 +47,7 @@ export default {
       isLoading: false,
       phone: '',
       code: '',
-      codeText: '获取验证码',
+      countdown: 0,
       timer: null // 验证码timer
     }
   },

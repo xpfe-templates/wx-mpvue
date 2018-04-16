@@ -3,7 +3,7 @@
     <div class="walletCharge-board">
       <img class="walletCharge-board__bg" src="/static/img/img-bg-rect.jpg">
       <div class="walletCharge-board__input">
-        <input type="digit" v-model.lazy="amount" placeholder="请输入充值金额">
+        <input type="digit" v-model="amount" placeholder="请输入充值金额">
       </div>
       <div class="walletCharge-board__btn">
         <btn type="white" size="tiny" @click="onCharge" text="支 付"></btn>

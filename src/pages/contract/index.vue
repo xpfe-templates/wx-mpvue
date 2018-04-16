@@ -53,7 +53,7 @@ export default {
       this.$store
         .dispatch('SignContract')
         .then(res => {
-          this.form = 'signApp'
+          this.from = 'signApp'
           const extraData = res.value
           return wx.navigateToMiniProgram({
             appId: 'wxbd687630cd02ce1d',
