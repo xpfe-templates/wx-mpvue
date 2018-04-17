@@ -1,26 +1,27 @@
 <template>
   <div class="index">
-    <toptips class-name="u-toptips-red" :title="topTitle" :visible.sync="topShow"></toptips>
+    <toast :title="toastTitle" :visible.sync="toastShow" :icon="toastIcon" :duration="0"></toast>
   </div>
 </template>
 
 <script>
 import wx from 'wx'
 import { mapGetters } from 'vuex'
-import toptips from '@miniui/toptips'
+import toast from '@miniui/toast'
 
 export default {
   components: {
-    toptips
+    toast
   },
   data() {
     return {
-      topTitle: '',
-      topShow: false
+      toastIcon: 'loading',
+      toastTitle: '',
+      toastShow: false
     }
   },
   computed: {
-    ...mapGetters(['userInfo'])
+    ...mapGetters(['userInfo', 'globalQuery'])
   },
 
   methods: {
@@ -43,8 +44,28 @@ export default {
           }
         })
         .catch(err => {
-          this.topTitle = err.codeDesc
-          this.topShow = true
+          this.toastIcon = 'warn'
+          this.toastTitle = err.codeDesc
+          this.toastShow = true
+        })
+    },
+    // 开门前状态检测
+    preCheck() {
+      return this.$store
+        .dispatch('OpenDoorPreCheck')
+        .then(() => {
+          this.$router.replace({ path: '/pages/door/index' })
+        })
+        .catch(err => {
+          if (err.codeNum === 80009) {
+            this.$router.replace({ path: '/pages/contract/index?path=/pages/door/index' })
+          } else if (err.codeNum === 80008) {
+            this.$store.commit('SET_GLOBAL_QUERY', {
+              ...this.globalQuery,
+              ...{ outCode: err.value.unPayCode, from: 'door' }
+            })
+            this.$router.replace({ path: '/pages/order/detail?outCode=' + err.value.unPayCode })
+          }
         })
     },
     // 入口分析
@@ -59,8 +80,9 @@ export default {
         // 未支付订单
         this.$router.replace({ path: '/pages/order/detail' })
       } else if (formatQ.storeCode) {
+        this.preCheck()
         // 开门
-        this.$router.replace({ path: '/pages/door/index' })
+        // this.$router.replace({ path: '/pages/door/index' })
       } else if (formatQ.action === 'grantAuth') {
         // 开通免密
         this.$router.replace({ path: '/pages/contract/index' })
@@ -71,6 +93,11 @@ export default {
   created() {
     // 调用应用实例的方法获取全局数据
     this.$store.dispatch('GetUserInfo')
+  },
+  mounted() {
+    this.toastIcon = 'loading'
+    this.toastTitle = '加载中'
+    this.toastShow = true
   },
   onLoad() {
     // q = 'https://prev-aierp.startdtapi.com/aierp/v1/qrCode/generateQrCode10008?action=grantAuth'

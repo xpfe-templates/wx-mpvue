@@ -61,7 +61,7 @@ export function formatRes(res) {
     res = {
       success: res.code === 0,
       codeNum: res.code,
-      codeDesc: res.errorMsg || '系统异常',
+      codeDesc: res.errorMsg || 'API系统异常',
       value: res.data
     }
   } else {

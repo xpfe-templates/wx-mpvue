@@ -8,6 +8,7 @@
 
 import fly from '@/api/request'
 import urls from '@/api/urls'
+import { appId } from '@/appConfig'
 
 const door = {
   state: {},
@@ -15,6 +16,11 @@ const door = {
   actions: {
     OpenDoor({ commit }, params) {
       return fly.request(urls.openDoor, params)
+    },
+    OpenDoorPreCheck ({ commit }, params) {
+      return fly.request(urls.openDoorPreCheck, {
+        appId
+      })
     }
   }
 }

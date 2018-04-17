@@ -11,10 +11,10 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "@miniui/btn": "^1.0.1",
-    "@miniui/list": "^1.0.1",
-    "@miniui/toast": "^1.0.1",
-    "@miniui/toptips": "^1.0.1",
+    "@miniui/btn": "^1.0.2",
+    "@miniui/list": "^1.0.2",
+    "@miniui/toast": "^1.0.2",
+    "@miniui/toptips": "^1.0.2",
     "flyio": "^0.4.7",
     "mpvue": "^1.0.6",
     "mpvue-entry": "^0.3.2",

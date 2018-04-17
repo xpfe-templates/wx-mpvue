@@ -4,7 +4,7 @@
  * @create date 2018-04-09 03:17:50
  * @modify date 2018-04-09 03:17:50
  * @desc [app参数设置]
-*/
+ */
 
 const env = process.env.NODE_ENV
 

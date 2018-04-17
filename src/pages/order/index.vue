@@ -76,6 +76,7 @@ export default {
       this.isLoading = false
       this.$store.commit('SET_ORDER_LIST', [])
       this.$store.commit('RESET_ORDER_PAGE')
+      this.isInit = false // 清除初始化状态标记
     }
   },
 

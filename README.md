@@ -1,4 +1,4 @@
-# wx-mpvue
+# vue-mp
 
 > 基于mpvue的小程序项目
 

@@ -84,6 +84,7 @@ export default {
       this.isLoading = false
       this.$store.commit('SET_WALLET_LIST', [])
       this.$store.commit('RESET_WALLET_PAGE')
+      this.isInit = false // 清除初始化状态标记
     }
   },
 

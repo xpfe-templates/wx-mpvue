@@ -6,9 +6,7 @@
  * @desc [api]
  */
 
-// let baseUrl = 'https://test-aierp7.startdtapi.com' // 测试
-// let baseUrl = 'https://prev-aierp.startdtapi.com' // 灰度
-let baseUrl = 'https://aierp.startdtapi.com' // 线上
+import { baseUrl } from '@/appConfig'
 
 const urls = {
   // 用户模块
@@ -20,6 +18,7 @@ const urls = {
   bindFace: '/aierp/v1/user/bindFace',
   userDetail: '/aierp/v1/user/detail',
   openDoor: '/aierp/v1/user/openDoorByScanMagicBoxQrCode',
+  openDoorPreCheck: '/aierp/v1/user/openDoorPreCheck',
   // 二维码模块
   getQrcode: '/aierp/v1/qrCode/generate',
   checkQrcode: '/aierp/v1/qrCode/check',
@@ -41,7 +40,7 @@ const urls = {
   refundContract: '/aierp/v1/contract/contractRefund'
 }
 
-Object.keys(urls).forEach((key) => {
+Object.keys(urls).forEach(key => {
   urls[key] = baseUrl + urls[key]
 })
 

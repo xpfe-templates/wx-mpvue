@@ -4,7 +4,7 @@
  * @create date 2018-04-11 09:38:52
  * @modify date 2018-04-11 09:38:52
  * @desc [wx不需要promise化的列表]
-*/
+ */
 
 module.exports = [
   'onSocketOpen',

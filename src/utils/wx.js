@@ -4,11 +4,11 @@
  * @create date 2018-04-09 05:33:26
  * @modify date 2018-04-09 05:33:26
  * @desc [重写wx]
-*/
+ */
 
 import whiteList from './wxWhiteList'
 
-function promisify (apiName) {
+function promisify(apiName) {
   return (options, ...params) => {
     return new Promise((resolve, reject) => {
       wx[apiName](Object.assign({}, options, { success: resolve, fail: reject }), ...params)

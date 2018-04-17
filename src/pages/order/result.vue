@@ -37,7 +37,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['orderResult', 'contractStatus']),
+    ...mapGetters(['orderResult', 'contractStatus', 'globalQuery']),
     needAuth() {
       return authPay && this.contractStatus === 0
     },
@@ -62,7 +62,11 @@ export default {
     },
     // 返回上页
     jumpBack() {
-      this.$router.back()
+      if (this.globalQuery.from === 'door') { // 从扫码开门来
+        this.$router.replace({ path: '/pages/door/index' })
+      } else {
+        this.$router.back()
+      }
     },
     // 签约
     jumpContract() {
