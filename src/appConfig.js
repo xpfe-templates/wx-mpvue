@@ -18,14 +18,16 @@ if (env === 'production') {
   baseUrl = 'https://aierp.startdtapi.com'
 }
 
-const appId = 'wxec84edcb251c0e60'
+const appId = 'wx3dcfeef0d382c2a3'
 const serviceNumber = '0571-28121848' // 客服电话
-const authPay = true // 委托代扣开关
+const userAuth = false // 用户授权开关
+const payAuth = false // 委托代扣开关
 
 module.exports = {
   debug,
   baseUrl,
   appId,
   serviceNumber,
-  authPay
+  userAuth,
+  payAuth
 }
