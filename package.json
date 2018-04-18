@@ -1,5 +1,5 @@
 {
-  "name": "wx-mpvue",
+  "name": "{{projectName}}",
   "version": "1.0.0",
   "description": "基于mpvue的小程序项目",
   "author": "xiaoping <edwardhjp@gmail.com>",
