@@ -11,13 +11,21 @@ import Vuex from 'vuex'
 import getters from './getters'
 import app from './modules/app'
 import user from './modules/user'
+import order from './modules/order'
+import wallet from './modules/wallet'
+import protocol from './modules/protocol'
+import door from './modules/door'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
   modules: {
     app,
-    user
+    user,
+    order,
+    wallet,
+    protocol,
+    door
   },
   getters
 })
