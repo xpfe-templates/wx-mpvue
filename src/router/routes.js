@@ -18,79 +18,15 @@ module.exports = [
     }
   },
   {
-    path: '/pages/user/register',
+    path: '/pages/user/location',
     config: {
-      enablePullDownRefresh: true,
-      navigationBarTitleText: '注册'
+      navigationBarTitleText: '地址'
     }
   },
   {
-    path: '/pages/user/verify',
+    path: '/pages/user/feedback',
     config: {
-      navigationBarTitleText: '人脸认证'
-    }
-  },
-  {
-    path: '/pages/user/result',
-    config: {
-      navigationBarTitleText: '认证结果'
-    }
-  },
-  {
-    path: '/pages/order/index',
-    config: {
-      enablePullDownRefresh: true,
-      navigationBarTitleText: '订单'
-    }
-  },
-  {
-    path: '/pages/order/detail',
-    config: {
-      enablePullDownRefresh: true,
-      navigationBarTitleText: '订单详情'
-    }
-  },
-  {
-    path: '/pages/order/result',
-    config: {
-      navigationBarTitleText: '支付结果'
-    }
-  },
-  {
-    path: '/pages/wallet/index',
-    config: {
-      enablePullDownRefresh: true,
-      navigationBarTitleText: '钱包'
-    }
-  },
-  {
-    path: '/pages/wallet/charge',
-    config: {
-      navigationBarTitleText: '充值'
-    }
-  },
-  {
-    path: '/pages/wallet/result',
-    config: {
-      navigationBarTitleText: '充值结果'
-    }
-  },
-  {
-    path: '/pages/contract/index',
-    config: {
-      navigationBarTitleText: '免密代扣'
-    }
-  },
-  {
-    path: '/pages/protocol/index',
-    config: {
-      navigationBarTitleText: ''
-    }
-  },
-  {
-    path: '/pages/door/index',
-    config: {
-      navigationBarTitleText: '开门'
+      navigationBarTitleText: '反馈'
     }
   }
 ]

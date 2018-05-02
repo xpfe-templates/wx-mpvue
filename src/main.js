@@ -20,24 +20,14 @@ export default {
     pages: [
       'pages/index/index',
       'pages/user/index',
-      'pages/user/register',
-      'pages/user/verify',
-      'pages/user/result',
-      'pages/order/index',
-      'pages/order/detail',
-      'pages/order/result',
-      'pages/wallet/index',
-      'pages/wallet/charge',
-      'pages/wallet/result',
-      'pages/contract/index',
-      'pages/protocol/index',
-      'pages/door/index'
+      'pages/user/location',
+      'pages/user/feedback'
     ],
     // 微信window参数
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'AI体验馆',
+      navigationBarTitleText: 'MNUI',
       navigationBarTextStyle: 'black'
     }
     // 有tabBar的时候配置
