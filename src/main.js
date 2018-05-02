@@ -37,7 +37,7 @@ export default {
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'mnui',
+      navigationBarTitleText: 'AI体验馆',
       navigationBarTextStyle: 'black'
     }
     // 有tabBar的时候配置

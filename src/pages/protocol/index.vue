@@ -1,7 +1,7 @@
 <template>
   <div class="wrap protocol">
-    <div class="protocol-container">
-      <wx-parse :content="protocol"></wx-parse>
+    <div class="protocol-wrap">
+      <wx-parse noData="" :content="protocol"></wx-parse>
     </div>
     <toptips class-name="u-toptips-red" :title="topTitle" :visible.sync="topShow"></toptips>
   </div>
@@ -56,18 +56,16 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
+@import url("mpvue-wxparse/src/wxParse.css");
 .protocol {
   padding: 20px;
-  &-container {
+  &-wrap {
     box-sizing: border-box;
     width: 100%;
     min-height: 100vh;
     padding: 40px;
     background: #fff;
-    & > .wxParse {
-      font-size: 28px;
-    }
   }
 }
 </style>

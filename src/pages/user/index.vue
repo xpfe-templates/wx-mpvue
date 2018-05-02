@@ -1,9 +1,10 @@
 <template>
   <div class="wrap user">
-    <div class="user-info" @click="tipTest">
+    <div class="user-info">
       <img class="user-info__bg" src="/static/img/img-bg-round.jpg">
-      <div class="user-info__face" @click="onChangePhoto">
-        <img class="user-info__faceImg u-face-bg" v-if="userDetail.faceImgUrl" :src="userDetail.faceImgUrl">
+      <div class="user-info__face" v-if="userDetail.faceImgUrl" @click="onChangePhoto">
+        <img class="user-info__faceImg u-face-bg" :src="userDetail.faceImgUrl">
+        <img class="user-info__faceIcon" src="/static/img/icon-edit.png">
       </div>
       <div class="user-info__name u-ellipsis">{{userDetail.nickName}}</div>
     </div>

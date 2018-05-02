@@ -19,7 +19,7 @@
     "mpvue": "^1.0.6",
     "mpvue-entry": "^0.3.2",
     "mpvue-router-patch": "^0.1.1",
-    "mpvue-wxparse": "^0.5.4",
+    "mpvue-wxparse": "^0.6.0",
     "vuex": "^2.3.1",
     "xp-utils": "^1.1.9"
   },
